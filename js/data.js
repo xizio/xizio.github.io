@@ -3,13 +3,13 @@ function getList(){
 		{
 			title: "我在小鱼已经赚了211.55元，一起来玩吧！",
 			content: "简单好玩别犹豫！新人100%有礼！",
-			image: "image/03.png",
+			image: "image/03.PNG",
 			href: "http://wx.xy599.com/share.php?id=19001627&act_source=invite"
 		},
 		{
 			title: "免费领5元，10元即可提现",
 			content: "提供大量的应用试玩，多种赚钱方式！",
-			image: "image/04.png",
+			image: "image/04.PNG",
 			href: "http://im.jubaopeng8888.com/jbph5/api/sharePage/13661417"
 		},
 		{
