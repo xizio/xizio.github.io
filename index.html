@@ -1,0 +1,77 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <title>不积跬步，无以至千里</title>
+
+  <link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.7.2/css/amazeui.min.css">
+</head>
+<body>
+
+
+ <div data-am-widget="list_news" class="am-list-news am-list-news-default" >
+  <!--列表标题-->
+  <div class="am-list-news-hd am-cf">
+    <!--带更多链接-->
+    <a href="###" class="">
+      <h2>领取任务</h2>
+      <span class="am-list-news-more am-fr">更多 &raquo;</span>
+    </a>
+  </div>
+
+  <div class="am-list-news-bd">
+  <ul class="am-list" id="xizio">
+  </ul>
+  </div>
+
+    </div>
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!--<![endif]-->
+<!--[if lte IE 8 ]>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="http://cdn.amazeui.org/amazeui/2.7.2/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+<script src="js/data.js"></script>
+<script type="text/javascript">
+  var data = getList()
+  // console.log(data)
+  data.forEach(v=>{
+    console.log(v)
+    $("#xizio").append(genLi(v.title, v.content, v.image, v.href))
+  })
+
+  function genLi(title, content, image, href){
+    var li = $('<li></li>')
+    li.addClass('am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left')
+    li.html(`
+      <div class="am-u-sm-4 am-list-thumb">
+          <a href="${href}" class="">
+            <img src="${image}" alt=""/>
+          </a>
+        </div>
+
+        <div class=" am-u-sm-8 am-list-main">
+          <h3 class="am-list-item-hd">
+            <a href="${href}" class="">
+              ${title}
+            </a>
+          </h3>
+
+          <div class="am-list-item-text">
+            ${content}
+          </div>
+        </div>
+    `)
+    return li
+  }
+</script>
+<script src="http://cdn.amazeui.org/amazeui/2.7.2/js/amazeui.min.js"></script>
+</body>
+</html>
